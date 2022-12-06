@@ -1,5 +1,6 @@
 package com.example.livedatastudy
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +13,11 @@ class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: MyItem) {
             binding.mydata = item
+            binding.mydata.let { gg ->
+                gg!!.priorityCount.observe(MainActivity()) {
+                    gg.priority = it.toString()
+                }
+            }
         }
     }
 
