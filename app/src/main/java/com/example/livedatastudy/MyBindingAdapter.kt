@@ -14,7 +14,6 @@ object MyBindingAdapter {
         }
 
         val myAdapter = recyclerView.adapter as ItemAdapter
-
         items?.let {
             myAdapter.itemList = items
         }

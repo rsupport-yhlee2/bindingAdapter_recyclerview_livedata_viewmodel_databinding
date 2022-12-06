@@ -7,14 +7,9 @@ import androidx.lifecycle.ViewModel
 class MainViewModel : ViewModel() {
     private val _itemList = MutableLiveData<MutableList<MyItem>>()
     val itemList = _itemList
-    private val items = mutableListOf<MyItem>().apply {
-        add(MyItem("test","1"))
-        add(MyItem("test","2"))
-        add(MyItem("test","3"))
-    }
+    private val items = mutableListOf<MyItem>()
     fun putData() {
-        Log.e("click", "yes")
-        val item = MyItem("test", "4")
+        val item = MyItem("test", "${items.size}")
         items.add(item)
         _itemList.value = items
     }

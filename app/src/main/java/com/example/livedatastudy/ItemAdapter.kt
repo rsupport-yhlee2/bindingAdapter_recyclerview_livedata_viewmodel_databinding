@@ -6,9 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.livedatastudy.databinding.ItemMydataBinding
 
 class ItemAdapter : RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
-    var itemList = mutableListOf<MyItem>().apply {
-        add(MyItem("1","1"))
-    }
+    var itemList = mutableListOf<MyItem>()
 
     inner class ViewHolder(private val binding: ItemMydataBinding) :
         RecyclerView.ViewHolder(binding.root) {
