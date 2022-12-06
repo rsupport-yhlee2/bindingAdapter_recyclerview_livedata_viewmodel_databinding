@@ -1,15 +1,15 @@
 package com.example.livedatastudy
 
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainViewModel : ViewModel() {
     private val _itemList = MutableLiveData<MutableList<MyItem>>()
+    private val titleLiveData = MutableLiveData<String>()
     val itemList = _itemList
     private val items = mutableListOf<MyItem>()
-    fun putData() {
-        val item = MyItem("test", "${items.size}")
+    fun putData(title: String) {
+        val item = MyItem(title, "${items.size}")
         items.add(item)
         _itemList.value = items
     }

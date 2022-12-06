@@ -37,7 +37,7 @@
             android:id="@+id/inputButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()-> viewmodel.putData()}"
+            android:onClick="@{()-> viewmodel.putData(input.getText().toString())}"
             android:text="input"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

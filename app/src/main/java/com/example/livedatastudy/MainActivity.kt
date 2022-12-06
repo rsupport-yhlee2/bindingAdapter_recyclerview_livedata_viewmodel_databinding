@@ -18,6 +18,6 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.viewmodel = viewModel
         binding.lifecycleOwner = this
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        binding.input.text
     }
 }
